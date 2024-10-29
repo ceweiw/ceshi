@@ -35,6 +35,7 @@ SmartOSEK平台针对我国汽车电子领域的汽车电控系统的自主国�
 
 
 API列表：
+
 任务管理机制	StatusType ActivateTask (TaskType TaskID)：符合判断条件的情况下，激活一个处在suspend状态的任务，使其进入就绪队列，然后根据用户定义的调度策略执行任务调度。
 	StatusType TerminateTask( void )：符合判断条件的情况下，将当前任务挂起。不能在中断处理函数调用。当前任务必须已经释放申请的外部资源,挂起后根据用户定义的调度策略执行任务调度。
 	StatusType ChainTask (TaskType TaskID): 符合判断条件的情况下，挂起自己并且激活一个处在suspend状态的任务（TaskID），使其进入就绪队列, 根据用户定义的调度策略执行任务调度。该API不能在中断处理函数调用,当前任务必须已经释放申请的外部资源。
